@@ -1,6 +1,6 @@
 {
   "name": "@shelf/dynamodb-parallel-scan",
-  "version": "3.9.2",
+  "version": "3.9.3",
   "description": "Scan large DynamoDB tables faster with parallelism",
   "keywords": [
     "aws",
@@ -46,7 +46,6 @@
     "debug": "4.3.4",
     "lodash.chunk": "4.2.0",
     "lodash.clonedeep": "4.5.0",
-    "lodash.times": "4.3.2",
     "p-map": "4.0.0"
   },
   "devDependencies": {
@@ -63,7 +62,6 @@
     "@types/jest": "29.5.14",
     "@types/lodash.chunk": "4.2.9",
     "@types/lodash.clonedeep": "4.5.9",
-    "@types/lodash.times": "4.3.9",
     "@types/node": "16",
     "eslint": "8.57.1",
     "husky": "8.0.3",

@@ -1,5 +1,7 @@
 # dynamodb-parallel-scan [![CircleCI](https://circleci.com/gh/shelfio/dynamodb-parallel-scan/tree/master.svg?style=svg)](https://circleci.com/gh/shelfio/dynamodb-parallel-scan/tree/master) ![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg) [![npm (scoped)](https://img.shields.io/npm/v/@shelf/dynamodb-parallel-scan.svg)](https://www.npmjs.com/package/@shelf/dynamodb-parallel-scan)
 
+This is fork of dynamodb-parallel-scan, in which the library lodash.times has been replaced with custom implementation. The reason for this is that the library fails SCA(software composition analysis) scan.
+
 > Scan DynamoDB table concurrently (up to 1,000,000 segments), recursively read all items from every segment
 
 [A blog post going into details about this library.](https://vladholubiev.medium.com/how-to-scan-a-23-gb-dynamodb-table-in-1-minute-110730879e2b)

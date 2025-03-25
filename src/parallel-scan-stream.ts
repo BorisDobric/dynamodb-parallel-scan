@@ -1,6 +1,5 @@
 import {Readable} from 'stream';
 import cloneDeep from 'lodash.clonedeep';
-import times from 'lodash.times';
 import chunk from 'lodash.chunk';
 import getDebugger from 'debug';
 import type {DynamoDBDocument, ScanCommandInput} from '@aws-sdk/lib-dynamodb';
@@ -36,7 +35,7 @@ export async function parallelScanAsStream(
   const ddbClient = client ?? ddbv3Client(credentials);
   totalTableItemsCount = await getTableItemsCount(scanParams.TableName!, ddbClient);
 
-  const segments: number[] = times(concurrency);
+  const segments: number[] = Array.from({length: concurrency}, (_, i) => i);
 
   const blocker = new Blocker();
 
